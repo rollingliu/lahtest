@@ -1,0 +1,58 @@
+
+'''
+compare input data and retrieve data ;
+If there are duplicate records in the database, an error directly; if the retrieve data is null, then creating fail; if the retrieve data is not null,
+then compare input data and retrieve data, if they are consistent, creating sucessfull, else failure.
+
+ '''
+
+
+import requests
+import json
+
+
+
+requests.put("https://rollingliu.cloudant.com/lahtest", # Create a database
+             auth=("rollingliu", "password"))
+
+
+
+requests.put("https://rollingliu.cloudant.com/lahtest/lah_doc", # Create a document
+             auth=("rollingliu", "password"),
+             headers={"content-type":"application/json"},
+             data=json.dumps({"foo":"bar"})) #  value
+
+ 
+    dic= requests.get("https://rollingliu.cloudant.com/lahtest/lah_doc", # Get a document 
+             auth=("rollingliu", "password"))
+			 
+		 
+	
+		 
+		inputvalue = json.loads(data) # input value, json to dict
+	    retrievevalue= json.loads(dic) # retrieve value, json to dict
+		 
+		def cmpdicts(dict1, dict2):
+		    if not dict2:
+			    for key1 in dict2:
+				    for key2 in dict1 
+                        if key1 == key2:
+                            if dict1[key1] == dict2[key2]:
+                                print  "the creating is sucessfull"
+						else:
+						    break
+            return true;
+		
+        
+		print cmpdicts(inputvalue,retrievevalue); 
+		
+		
+		'''
+		another function cmp(dict1, dict2) can be used.
+		
+		'''
+		
+			    
+    
+						
+	    
