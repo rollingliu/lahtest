@@ -1,8 +1,9 @@
 
 '''
 compare input data and retrieve data ;
-If there are duplicate records in the database, an error directly; if the retrieve data is null, then creating fail; if the retrieve data is not null,
-then compare input data and retrieve data, if they are consistent, creating sucessfull, else failure.
+If there are duplicate records in the database, an error directly; if the retrieve data is null, then creating fail; 
+if the retrieve data is not null,then compare input data and retrieve data,
+if they are consistent, creating sucessfull, else failure.
 
  '''
 
